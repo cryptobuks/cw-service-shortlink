@@ -1,0 +1,23 @@
+module.exports = {
+  service: 'shortlinks',
+  fastify: { active: true, port: 0 },
+  redis: { active: false },
+  options: {
+    url: 'https://dev.cwl.fit/'
+  },
+  mongodb: {
+    active: true,
+    databases: [
+      {
+        name: 'links',
+        db: 'shortlink',
+        options: {}
+      },
+      {
+        name: 'logs',
+        db: 'shortlink',
+        options: {}
+      }
+    ]
+  }
+}

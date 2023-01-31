@@ -1,0 +1,29 @@
+module.exports = {
+    service: 'shortlinks',
+    rabbitmq: { active: true, server: 'localhost:15672', user: 'dev', password: 'dev123' },
+    redis: { active: false, server: 'localhost', port: 16379 },
+    options: {
+        url: 'https://dev.cwl.fit/'
+    },
+    mongodb: {
+      active: true,
+      server: 'localhost',
+      port: '',
+      user: '',
+      password: '',
+      debug: true,
+      databases: [
+         {
+          name: 'links',
+          db: 'shortlink',
+          options: {}
+        },
+        {
+          name: 'logs',
+          db: 'shortlink',
+          options: {}
+        }
+      ]
+    }
+  }
+  
